@@ -1,0 +1,22 @@
+{
+  "name": "@ParceladoLara/payment-plan-wasm",
+  "version": "3.0.3",
+  "type": "module",
+  "license": "ISC",
+  "files": [
+    "index_bg.wasm",
+    "index.js",
+    "index_bg.js",
+    "index.d.ts"
+  ],
+  "main": "index.js",
+  "types": "index.d.ts",
+  "sideEffects": [
+    "./index.js",
+    "./snippets/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ParceladoLara/payment-plan-wasm-sdk.git"
+  }
+}
