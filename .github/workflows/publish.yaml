@@ -1,0 +1,32 @@
+name: Publish npm package to npm registry
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          registry-url: "https://registry.npmjs.org/"
+
+      - name: install wasm-pack
+        run: npm install -g wasm-pack
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Publish package
+        run: wasm-pack publish -d .
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
