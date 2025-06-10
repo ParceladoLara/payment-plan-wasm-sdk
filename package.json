@@ -1,6 +1,6 @@
 {
   "name": "@parcelado_lara/payment-plan-wasm",
-  "version": "v3.0.13",
+  "version": "v3.0.14",
   "type": "module",
   "license": "ISC",
   "files": [
