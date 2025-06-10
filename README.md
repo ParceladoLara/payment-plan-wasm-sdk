@@ -18,8 +18,6 @@ To install the Lara Payment Plan WASM SDK, you can use npm:
 npm install @parcelado_lara/payment-plan-wasm
 ```
 
-The SDK needs to download the compiled Rust library, so you may need to allow the package manager to download it.
-
 ## Usage
 To use the Lara Payment Plan WASM SDK, you can import it into your project as follows:
 
