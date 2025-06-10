@@ -1,4 +1,4 @@
-# Lara Payment Plan Node.js SDK
+# Lara Payment Plan WASM SDK
 
 This is the Lara Payment Plan SDK, the core of the Lara Credit Proposal System.
 
