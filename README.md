@@ -9,7 +9,6 @@ If you are looking for a Node.js SDK, please use the [@parcelado_lara/payment-pl
 ## About
 
 This SDK, like other Lara Payment Plan SDKs, is a wrapper around the Lara Payment Plan Rust library.
-Currently, the library is available for Linux and Windows. MacOS support is planned for the future.
 
 ## Installation
 To install the Lara Payment Plan WASM SDK, you can use npm:
