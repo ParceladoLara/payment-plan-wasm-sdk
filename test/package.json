@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build:vite": "vite build",
     "build:rsbuild": "rsbuild build -m production",
-    "serve": "vite preview",
+    "serve:vite": "vite preview",
     "serve:rsbuild": "rsbuild preview",
-    "test": "playwright test",
-    "test:rsbuild": "playwright test --config ./playwright.rsbuild.config.ts"
+    "test:vite": "rm -rf dist && playwright test --config playwright.vite.config.ts",
+    "test:rsbuild": "rm -rf dist && playwright test --config playwright.rsbuild.config.ts",
+    "test": "npm run test:vite && npm run test:rsbuild"
   },
   "dependencies": {
     "@parcelado_lara/payment-plan-wasm": "file:../pkg",
