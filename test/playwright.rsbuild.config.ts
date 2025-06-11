@@ -2,8 +2,8 @@ import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
   webServer: {
-    command: "npm run build && npm run serve",
-    port: 4173,
+    command: "npm run build:rsbuild && npm run serve:rsbuild",
+    port: 5173,
     reuseExistingServer: !process.env.CI,
   },
   testDir: "./playwright",
