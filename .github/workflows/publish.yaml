@@ -27,7 +27,7 @@ jobs:
           version: "latest"
 
       - name: Install dependencies
-        run: npm i
+        run: cd pkg && npm i && cd ..
 
       - name: Publish package
         run: wasm-pack publish
