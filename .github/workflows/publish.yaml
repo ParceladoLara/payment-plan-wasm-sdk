@@ -23,12 +23,21 @@ jobs:
           registry-url: "https://registry.npmjs.org/"
           package-manager-cache: false  # never use caching in release builds
 
+      - uses: jetli/wasm-pack-action@v0.4.0
+        name: Install wasm-pack
+        with:
+          # Optional version of wasm-pack to install(eg. 'v0.9.1', 'latest')
+          version: "latest"
+
       - name: Update npm to latest version for OIDC support
         run: npm install -g npm@latest
       - name: Run npm ci
-        run: npm ci
+        run: cd ./pkg && npm ci
 
       - name: Run npm test
-        run: npm test
-      - name: Publish package
-        run: npm publish
+        run: cd ./test && npm i && npm test
+      - name: Pack WASM package
+        run: wasm-pack pack
+
+      - name: Publish WASM package
+        run: wasm-pack publish
